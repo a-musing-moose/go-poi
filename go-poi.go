@@ -26,9 +26,9 @@ func LocationsHandler(w http.ResponseWriter, r *http.Request) {
 		lat := r.FormValue("lat")
 		long := r.FormValue("long")
 		msg := r.FormValue("msg")
-		uuid := uuid.NewV4()
+		id := uuid.NewV4()
 		l := Location{
-			UUID:      uuid.String(),
+			UUID:      id.String(),
 			Latitude:  lat,
 			Longitude: long,
 			Message:   msg}
